@@ -1,0 +1,73 @@
+package model;
+
+public class HeroCommand {
+	public HeroCommand() {}
+	public int attack(HeroStatusBean hero,Enemy enemy) {
+		if(enemy instanceof ManEnemyBean) {
+//			System.out.println(hero.getName() + "の攻撃！！！");
+			int damage = hero.getPower() + hero.getEquipmentPower();
+			enemy.setHp(enemy.getHp() - damage);
+//			System.out.println(enemy.getName() + "に" + damage + "のダメージを与えた");
+			return damage;
+//			if(e.getHp() <= 0) {
+//				System.out.println(e.getName() + "を倒した");
+//				e.setName("NULL");
+//			}
+		}else {
+			//System.out.println(enemy.getName() + "には効果がないようだ");
+			return (-1);
+		}	//ここどうしましょ？
+	}
+
+	public int eat(Enemy enemy,HeroStatusBean hero) {
+		if(enemy instanceof FoodEnemyBean) {
+//			System.out.println(hero.getName() + "の食事");
+			int damage = hero.getHungry() + hero.getEquipmentHungry();
+			enemy.setHp(enemy.getHp() - damage);
+			//hero.setMp(hero.getMp() + (damage / 2));
+//			System.out.println(enemy.getName() + "は" + damage + "グラム、量が減った");
+			return damage;
+		}else {
+//			System.out.println(enemy.getName() + "には効果がないようだ");
+			return (-1);
+		}
+	}
+//	 public attack(Enemy enemy){
+//
+//		int a = hero.getPower() + weapon.getPower();
+//		enemy.setHp() = enemy.getHp() - a;
+//
+//		System.out.println(hero.getName() + "は" + enemy.getName + "に" + a +"のダメージを与えた。"  );
+//	}
+//
+//	 public eat(Enemy enemy){
+//	        int a = hero.getHungry() + weapon.getHungry();
+//			enemy.setHp() = enemy.getHp() - (a);
+//			System.out.println(hero.getName() + "は" + enemy.getName + "に" + a +"のダメージを与えた。"  );
+//		}
+
+	 public String run(HeroStatusBean hero){
+//		 System.out.println(hero.getName() + "は食い逃げした。");
+		 String run = null;
+		 return run;
+		}
+
+	 public void item(HeroStatusBean hero,String itemName){
+//		List<ItemBean>itemList=(List<ItemBean>)session.getAttribute("itemList");
+//		セッション使用不可：所持数のListを回す
+		 for(ItemBean item :hero.getPersonal_belogingsList()) {
+			if(itemName.equals(item.getName())) {
+				if(item.getHave()<= 0) {
+//				System.out.println("アイテムを持ってません");
+				}else if(item.getHave()>=1) {
+			 	int hp = hero.getHp() + item.getPower();
+			 	int mp = hero.getMp() - item.getHungry();
+			 	hero.setHp(hp);
+			 	hero.setMp(mp);
+//			 	System.out.println("HPが" + item.getPower() + "回復した。");
+//			 	System.out.println("MPが" + item.getHungry() + "回復した。");
+			 	int useitem = item.getHave()-1;
+			 	item.setHave(useitem );
+			 	
+		}}}}}
+

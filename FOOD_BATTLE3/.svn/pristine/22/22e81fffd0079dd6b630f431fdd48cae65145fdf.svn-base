@@ -1,0 +1,25 @@
+function itemList(){
+	
+	//kname=傷薬 iname=胃薬 qname=謎の液体
+	//アイテムの名前をjspから取得して定義
+	var kname = document.getElementById("kname").textContent;
+	var iname = document.getElementById("iname").textContent;
+	var qname = document.getElementById("qname").textContent;
+
+	//アイテムの個数をjspから取得して定義
+	var knumber = document.getElementById("knumber").textContent;
+	var inumber = document.getElementById("inumber").textContent;
+	var qnumber = document.getElementById("qnumber").textContent;
+	
+	//アイテムのhp回復量をjspから取得して定義
+	var khp = document.getElementById("khp").textContent;
+	var ihp = document.getElementById("ihp").textContent;
+	var qhp = document.getElementById("qhp").textContent;
+	
+	//アイテムのmp回復力をjspから取得して定義
+	var kmp = document.getElementById("kmp").textContent;
+	var imp = document.getElementById("imp").textContent;
+	var qmp = document.getElementById("qmp").textContent;
+
+	
+}

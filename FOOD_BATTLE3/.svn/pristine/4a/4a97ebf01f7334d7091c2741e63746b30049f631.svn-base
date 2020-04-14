@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ビック鯛はのぼる</title>
+</head>
+<body>
+
+<form action="/FOOD_BATTLE/BossReady" method="get" >
+<button type=submit name="name" value="鯛の大将" >ボタンテキスト</button>
+</form>
+</body>
+</html>

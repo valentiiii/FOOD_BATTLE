@@ -1,0 +1,117 @@
+package servlet;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import model.BoxBean;
+import model.Enemy;
+import model.HeroStatusBean;
+
+/**
+ * Servlet implementation class testAttack
+ */
+@WebServlet("/Battle")
+public class Battle extends HttpServlet {
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = 1L;
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+
+		HttpSession session = request.getSession();
+		HeroStatusBean hero = (HeroStatusBean)session.getAttribute("hero");
+		HttpSession session2=request.getSession();
+		Enemy enemy = (Enemy)session2.getAttribute("enemy");
+		BoxBean box = new BoxBean();
+		HttpSession sessionBean = request.getSession();
+
+//test
+	/*	String a="attack";
+		String b="eat";
+		String c="run";
+		String d="item";*/
+//		if(name.equals(a)) {
+//			name=a;
+//		}else if(name.equals(b)) {
+//			name=b;
+//		}else if(name.equals(c)) {
+//			name=c;
+//		}else if(name.equals(d)) {
+//			name=d;
+//		}
+//問題点nameの値がおかしい・・・デバックで確認
+//test end	getClass().isArray()
+//request.getParameterValues("name").getClass().isArray()
+		String single=request.getParameter("name");//現在：戦うが返ってくる
+		//String single2=request.getSession().toString();
+		//String single3=request.getSession().getId();
+		if(single.equals("attack")||single.equals("eat")||single.equals("run")){//(single.equals("attack")||single.equals("eat")||single.equals("run")){
+			/*			if(single.equals("戦う")) {
+
+						}else if(single.equals("食べる")) {
+
+						}else if(single.equals("逃げる")) {
+
+						}
+			*/
+		String get=request.getParameter("name");
+		String name=get;
+		switch(name) {
+		case "attack":
+			hero.attack(hero,enemy);
+			HttpSession session3 = request.getSession();
+			session3.setAttribute("enemy", enemy);
+			HttpSession session4 = request.getSession();
+			session4.setAttribute("hero", hero);
+			sessionBean.setAttribute("box", box);
+			RequestDispatcher dispatcher1 = request.getRequestDispatcher("BattleMain.jsp");
+			dispatcher1.forward(request, response);
+			break;
+
+		case "eat":
+			hero.eat(enemy, hero);
+			HttpSession session5 = request.getSession();
+			session5.setAttribute("enemy", enemy);
+			HttpSession session6 = request.getSession();
+			session6.setAttribute("hero", hero);
+			sessionBean.setAttribute("box", box);
+			RequestDispatcher dispatcher2 = request.getRequestDispatcher("BattleMain.jsp");
+			dispatcher2.forward(request, response);
+			break;
+
+		case "run":
+			hero.run(hero);
+			HttpSession session7 = request.getSession();
+//			session5.setAttribute("enemy", enemy);
+
+			session7.setAttribute("hero", hero);
+			sessionBean.setAttribute("box", box);
+			RequestDispatcher dispatcher3 = request.getRequestDispatcher("map.jsp");
+			dispatcher3.forward(request, response);
+			//逃げる際の相手の回復を作る
+			break;
+		}//↓テスト中
+		}else if(request.getParameterValues("name").getClass().isArray()) {
+		String[] get =request.getParameterValues("name");
+		String single10=request.getParameter("name");
+		String name=get[0];
+		String itemName=get[1];
+//		if(name.equals("item")) {
+//戦闘中の装備変更はどうしますか？
+		if(name.equals("アイテム")) {
+			hero.item(hero,itemName);
+			HttpSession session8 = request.getSession();
+			session8.setAttribute("hero", hero);
+
+			sessionBean.setAttribute("box", box);
+			RequestDispatcher dispatcher4 = request.getRequestDispatcher("BattleMain.jsp");
+			dispatcher4.forward(request, response);
+		}}}}

@@ -1,0 +1,13 @@
+function itemList(){
+
+//	attackBt.disabled = true;
+//	eatBt.disabled = true;
+//	notattackBt.disabled = true;
+//	noteatBt.disabled = true;
+//	itemBt.disabled = true;
+//	runBt.disabled = true
+
+	document.getElementById('comment').innerHTML =
+		'<iframe src = "itemList.jsp" width="800" ></iframe>'
+
+}

@@ -1,0 +1,4 @@
+function itemList(){
+	document.getElementById('comment').innerHTML =
+		'<iframe src = "itemList.jsp" width="800" ></iframe>'
+}

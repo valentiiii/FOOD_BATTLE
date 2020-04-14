@@ -1,0 +1,365 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 768px) {
+	html{
+        width:auto;
+        height: auto;
+    }
+
+@font-face{
+font-family:dqfont;
+src:url('PixelMplus10-Regular.woff')format('woff');
+}
+html{
+	width:auto;
+	height: 90%;
+	font-family:dqfont;
+}
+
+body{
+	background-color:black;
+	color:white;
+	margin-top: 1%;
+
+}
+
+/* ----------------------------------------------- */
+
+.tolk{
+	text-align:center;
+	display:block;
+	max-width:50%;
+	height: auto;
+	margin:0 auto;
+	position: relative;
+}
+
+.king{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10%;
+    left: 38%;
+}
+
+.hero{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    left: 36%;
+
+}
+
+.night1{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+<<<<<<< .mine
+    top: 0%;
+    left: 35%;
+||||||| .r886
+=======
+    top: 15%;
+    left: 14%;
+>>>>>>> .r890
+
+}
+
+.night2{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0%;
+    left: 55%;
+
+}
+.night3{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 16%;
+    left: 35%;
+
+}
+
+.night4{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 16%;
+    left: 55%;
+
+}.night5{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 32%;
+    left: 35%;
+
+}
+
+.night6{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 32%;
+    left: 55%;
+
+}.night7{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 48%;
+    left: 35%;
+
+}
+
+.night8{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 48%;
+    left: 55%;
+
+}
+
+
+
+/* ----------------------------------------------- */
+
+.explain{
+
+	margin-left:auto;
+	margin-right:auto;
+    bottom:0;
+	padding-left: 20px;
+    position: relative;
+	width:1060px;
+	height:160px;
+	border-style:solid;
+	border-color:white;
+	border-radius:10px;
+	color:white;
+	margin-top: 17px;
+
+}
+
+.explain p{
+
+}
+
+/* ----------------------------------------------- */
+input{
+	font-family:dqfont;
+	width		 	: 120px;
+  	display       : inline-block;
+  	border-radius : 9%;
+  	font-size     : 10pt;
+  	text-align    : center;
+  	cursor        : pointer;
+  	padding       : 10px 15px;
+ 	background    : rgba(0, 0, 0, 0.10);
+	color         : #ffffff;
+ 	line-height   : 0.3em;
+ 	opacity       : 0.9;
+	transition    : .3s;
+	position: absolute;
+	right: 8%;
+	top: 70%;
+
+}
+/* ----------------------------------------------- */
+}
+
+/* ----------------------------------------------------スマホ */
+
+
+@media screen and (max-width: 768px) {
+html{
+    width:auto;
+    height: 100%;
+    display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+@font-face{
+font-family:dqfont;
+src:url('PixelMplus10-Regular.woff')format('woff');
+}
+html{
+
+	font-family:dqfont;
+}
+
+body{
+	background-color:black;
+	color:white;
+
+}
+
+/* ----------------------------------------------- */
+
+.tolk img{
+	align-items: center;
+	display:block;
+	max-width: 100%;
+	max-height: 50%;
+    position: relative;
+}
+
+.king img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10%;
+    left: 40%;
+}
+
+.hero img{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+
+}
+
+.night1 img{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 3%;
+    left: 3%;
+
+}
+
+.night2 img{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 3%;
+    left: 58%;
+
+}
+.night3 img{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 17%;
+    left: 3%;
+
+}
+
+.night4 img{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 17%;
+    left: 58%;
+
+}
+.night5 img{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 31%;
+    left: 3%;
+
+}
+
+.night6 img{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 31%;
+    left: 58%;
+
+}
+.night7 img{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 45%;
+    left: 3%;
+
+}
+
+.night8 img{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 45%;
+    left: 58%;
+
+}
+
+
+
+
+/* ----------------------------------------------- */
+
+.explain{
+
+    bottom:0;
+    position: relative;
+	width:90%;
+	height:200px;
+	border-style:solid;
+	border-color:white;
+	border-radius:10px;
+	color:white;
+	margin: auto;
+	margin-top: 5%;
+
+}
+
+.explain p{
+	float: left;
+
+}
+
+/* ----------------------------------------------- */
+input{
+	font-family:dqfont;
+	width		 	: 120px;
+  	display       : inline-block;
+  	border-radius : 9%;
+  	font-size     : 10pt;
+  	text-align    : center;
+  	cursor        : pointer;
+  	padding       : 10px 15px;
+ 	background    : rgba(0, 0, 0, 0.10);
+	color         : #ffffff;
+ 	line-height   : 0.3em;
+ 	opacity       : 0.9;
+	transition    : .3s;
+	position: absolute;
+	right: 8%;
+	top: 80%;
+}
+/* ----------------------------------------------- */
+}
+

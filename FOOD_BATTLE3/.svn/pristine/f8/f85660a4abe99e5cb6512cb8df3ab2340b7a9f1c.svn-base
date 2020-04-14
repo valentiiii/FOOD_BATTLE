@@ -1,0 +1,42 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@ page import="model.HeroStatusBean,model.ItemBean"%>
+<%HeroStatusBean hero = (HeroStatusBean)session.getAttribute("hero");%>
+<% %>
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<title>アイテム一覧</title>
+<link rel = "stylesheet" type = "text/css" href = "css/List.css"/>
+</head>
+<body>
+アイテム一覧
+所持アイテム名 所持数<br>
+
+<% String[][] getitem = new String[3][3];
+   String[][] gethpmp = new String[3][3];
+   int i = 0;
+   int k = 0;%>
+
+ <% for(ItemBean item :hero.getPersonal_belogingsList()){ %>
+   <%getitem[0][i] = item.getName();
+	 getitem[1][i] = String.valueOf(item.getHave());
+	 gethpmp[0][k] = String.valueOf(item.getPower());
+	 gethpmp[1][k] = String.valueOf(item.getHungry());
+	 k++;
+	 i++;%>
+<% } %>
+
+<p id =aaa><%= getitem[0][0] %><%= getitem[1][0] %> <%= gethpmp[0][0]%> <%= gethpmp[1][0]%></p>
+ <%=getitem[0][1] %> <%= getitem[1][1] %> <%= gethpmp[0][1]%> <%= gethpmp[1][1]%><br>
+ <%= getitem[0][2] %> <%= getitem[1][2] %> <%= gethpmp[0][2]%> <%= gethpmp[1][2]%><br>
+
+
+使用したいアイテムを選んでください。
+
+
+
+</body>
+</html>

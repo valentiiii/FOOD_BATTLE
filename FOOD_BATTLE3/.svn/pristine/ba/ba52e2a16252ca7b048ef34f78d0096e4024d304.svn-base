@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ラーメン帝国</title>
+</head>
+<body>
+
+<form action="/FOOD_BATTLE/Ready" method="get" >
+<button type=submit name="name" value="帝王" >いらっしゃいませ（帝王）</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,73 @@
+package model;
+
+public class BoxBean {
+		private String name;
+		private int damage;
+		private int eat;
+		private String run;
+		private String item;
+		private int HpRecovery;
+		private int MpRecovery;
+		//使い方次第・・・コンストラクタ
+		public BoxBean(){}
+		//ダメージ(attack,eat)　効果がないで-1を返す
+		public BoxBean(String name,int damage){
+			setName(name);
+			setDamage(damage);
+		}
+		//逃げる（run）				runにはString runが返ってくる
+		public BoxBean(String name,String run){
+			setName(name);
+			setRun(run);
+		}
+		//アイテム(item)			アイテム型
+		public BoxBean(String name,String item,int HpRecovery,int MpRecovery){
+			setName(name);
+			setItem(item);
+			setHpRecovery(HpRecovery);
+			setMpRecovery(MpRecovery);
+		}
+		//getter,setter
+		public String getItem() {
+			return item;
+		}
+		public void setItem(String item) {
+			this.item = item;
+		}
+		public int getHpRecovery() {
+			return HpRecovery;
+		}
+		public void setHpRecovery(int recovery) {
+			this.HpRecovery = recovery;
+		}
+		public String getName() {
+			return name;
+		}
+		public void setName(String name) {
+			this.name = name;
+		}
+		public int getDamage() {
+			return damage;
+		}
+		public void setDamage(int damage) {
+			this.damage = damage;
+		}
+		public int getEat() {
+			return eat;
+		}
+		public void setEat(int eat) {
+			this.eat = eat;
+		}
+		public String getRun() {
+			return run;
+		}
+		public void setRun(String run) {
+			this.run = run;
+		}
+		public int getMpRecovery() {
+			return MpRecovery;
+		}
+		public void setMpRecovery(int mpRecovery) {
+			MpRecovery = mpRecovery;
+		}
+}

@@ -1,0 +1,70 @@
+
+function itemList(){
+	//kname=傷薬 iname=胃薬 qname=謎の液体
+	//アイテムの名前をjspから取得して定義
+	var kname = document.getElementById("kname").textContent;
+	var iname = document.getElementById("iname").textContent;
+	var qname = document.getElementById("qname").textContent;
+
+	//アイテムのhp回復量をjspから取得して定義
+	var khp = document.getElementById("khp").textContent;
+	var ihp = document.getElementById("ihp").textContent;
+	var qhp = document.getElementById("qhp").textContent;
+
+	//アイテムのmp回復力をjspから取得して定義
+	var kmp = document.getElementById("kmp").textContent;
+	var imp = document.getElementById("imp").textContent;
+	var qmp = document.getElementById("qmp").textContent;
+
+	//アイテムの個数をjspから取得して定義
+	var knumber = document.getElementById("knumber").textContent;
+	var inumber = document.getElementById("inumber").textContent;
+	var qnumber = document.getElementById("qnumber").textContent;
+
+	var attackBt = document.getElementById("attackBt");
+	var noteatBt = document.getElementById("noteatBt");
+	var itemBt = document.getElementById("itemBt");
+	var runBt = document.getElementById("runBt");
+
+	//アイテムボタンを押したらcommentのdivにアイテムリストを表示
+	if(Number(knumber)=== 0 && Number(inumber) === 0 && Number(qnumber) === 0){
+		document.getElementById('comment').innerHTML ='何も持っていない';
+	}else if(Number(knumber) > 0 && Number(inumber) > 0 && Number(qnumber) > 0){
+		document.getElementById('comment').innerHTML =
+		`<table><tr><th>名前</th><th>ＨＰ回復量</th><th>ＭＰ回復量</th><th>個数</th></tr>
+		<tr><th><input id="item" type="button" value=${kname} onclick="return itemuse()"></th><th>${khp}</th><th>${kmp}<th>${knumber}</th></tr>
+		<tr><th><input id="item" type="button" value=${iname} onclick="return itemuse()"></th><th>${ihp}</th><th>${imp}<th>${inumber}</th></tr>
+		<tr><th><input id="item" type="button" value=${qname} onclick="return itemuse()"></th><th>${qhp}</th><th>${qmp}<th>${qnumber}</th></tr>
+		</table><br>　　　　　　　※使用するアイテムを選んで下さい`;
+	}else if(Number(knumber) > 0 && Number(inumber) === 0 && Number(qnumber) === 0){
+		document.getElementById('comment').innerHTML =
+			`<table><tr><th>名前</th><th>ＨＰ回復量</th><th>ＭＰ回復量</th><th>個数</th></tr>
+			<tr><th><input id="item" type="button" value=${kname} onclick="return itemuse()"></th><th>${khp}</th><th>${kmp}<th>${knumber}</th></tr>`
+	}
+}
+
+//選択したアイテムの処理を実行する
+function itemuse(){
+	//傷薬の値を取得
+	var kname = document.getElementById("kname").textContent;
+	var khp = document.getElementById("khp").textContent;
+	var kmp = document.getElementById("kmp").textContent;
+	var knumber = document.getElementById("knumber").textContent;
+
+
+	//勇者の名前、hp,mpをjspから取得して定義
+	var hname = document.getElementById("hName").textContent;
+	var hhp = document.getElementById("hHpid").textContent;
+	var hmp = document.getElementById("hMpid").textContent;
+
+
+	//使った時のコメントを表示
+	document.getElementById('comment').innerHTML = `${hname}はを${kname}使った！！ＨＰが${khp}、ＭＰが${kmp}回復した！！`;
+
+	//勇者のHP,MPを書き換え
+	var hhpAfter = (Number(hhp) + Number(khp));
+	document.getElementById('hHpid').innerHTML = hhpAfter;
+}
+
+
+

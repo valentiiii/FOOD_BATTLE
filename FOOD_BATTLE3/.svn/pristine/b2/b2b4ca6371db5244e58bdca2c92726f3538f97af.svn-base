@@ -1,0 +1,47 @@
+package model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Hero_Personal_belongings extends HeroCommand{
+
+	//所持品(Listのインスタンス化)の定義
+	public List<ItemBean> Personal_belongings= new ArrayList();
+
+	//所持品のリストを返すメソッド
+	public List<ItemBean> getPersonal_belogingsList() {return Personal_belongings;}
+	//初期設定
+	public void setPersonal_belogingsList(List<ItemBean>itemList){
+		Personal_belongings=itemList;
+	}
+	//初期値代入0
+	public void setPersonal_belogingsList(){
+		for(ItemBean item:Personal_belongings) {
+			item.setHave(0);
+		}}
+
+
+	//所持品の入手(引数(getName()でアイテム名を入れる)し
+	//heroのPersonal_belongings(List)に入れるメソッド
+	//複数入手の場合は引数を増やすべし(String ObtainName,int Quantity)
+	public void setPersonal_belongings(String ObtainName) {
+		for(ItemBean item:Personal_belongings) {
+			if(ObtainName.equals(item.getName())) {
+				int i = item.getHave()+1;
+				item.setHave(i);
+	}}}
+	//上記のオーバーロード(ItemBean型)これは使えない気がする・・・
+	public void setPersonal_belongings(ItemBean item){
+		for(ItemBean personal:Personal_belongings) {
+			if(personal.equals(item.getName())) {
+				int i = item.getHave()+1;
+				item.setHave(i);
+	}}}
+	//testメソッドpublic void setPersonal_belongings(ItemBean item){
+//	public void setPersonal_belongings(Object n) {
+//	for(ItemBean n:Personal_belongings) {
+//		if(n.equals(item.getName())) {
+//			int i = item.getHave()+1;
+//			item.setHave(i);
+//}}}
+}

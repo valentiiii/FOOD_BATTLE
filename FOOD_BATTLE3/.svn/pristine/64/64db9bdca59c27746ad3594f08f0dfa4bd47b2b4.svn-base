@@ -1,0 +1,22 @@
+@charset "UTF-8";
+body{
+	background-color:black;
+    color:white;
+}
+
+.gameover{
+	text-align:center;
+	display:block;
+	max-width:50%;
+	margin:0 auto;
+}
+
+a{
+	text-align:center;
+	display:block;
+	max-width:50%;
+	margin:0 auto;
+	font-size:36px;
+	color:white;
+	text-decoration:none;
+}

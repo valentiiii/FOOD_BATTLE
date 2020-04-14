@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+<title>対話</title>
+<link rel = "stylesheet" type = "text/css" href = "css/tolk.css"/>
+</head>
+<body>
+
+<!-- BGMを入れています -->
+<audio src="bgm/tolk.mp3" autoplay></audio>
+
+
+<div class = "tolk">
+<img src = "img/yuka.gif"  alt = "tolk">
+</div>
+<div class = "king">
+<img src = "img/teacher.png" width = "100" height = "100" alt = "king">
+</div>
+
+<div class = "hero">
+<img src = "img/hero.png" width = "100" height = "100" alt = "hero">
+</div>
+
+
+<div class = "night1">
+<img src = "img/night.png" width = "150" height = "150" alt = "hero">
+</div>
+
+
+<div class = "night2">
+<img src = "img/night.png" width = "150" height = "150" alt = "hero">
+</div>
+
+<div class = "night3">
+<img src = "img/night.png" width = "150" height = "150" alt = "hero">
+</div>
+
+
+<div class = "night4">
+<img src = "img/night.png" width = "150" height = "150" alt = "hero">
+</div>
+<div class = "night5">
+<img src = "img/night.png" width = "150" height = "150" alt = "hero">
+</div>
+
+
+<div class = "night6">
+<img src = "img/night.png" width = "150" height = "150" alt = "hero">
+</div>
+<div class = "night7">
+<img src = "img/night.png" width = "150" height = "150" alt = "hero">
+</div>
+
+
+<div class = "night8">
+<img src = "img/night.png" width = "150" height = "150" alt = "hero">
+</div>
+
+
+<!--音を出すメソッド（ジャヴァすく）  -->
+	<script type="text/javascript">
+		function ring() {
+			document.getElementById("button_sound").play();
+		}
+	</script>
+<!--idへ音を設定(src)  -->
+    <audio id="button_sound" preload="auto" src="bgm/pi.wav" type="audio/wav">
+    </audio>
+
+
+
+
+<div class = "explain">
+
+<p>勇者よ、サンセルコを救ってくれ！！<br>
+   サンセルコの飲食店が激戦区となっておる・・・<br>
+   それによりお店独自の料理が変な方向に発展している！<br>
+   お前の力で正しく導いてくれ！！<br>
+   早く行け！・・・・・・早く！・・・・いい加減行ってくれ！</p><br>
+
+
+
+<form action = "/FOOD_BATTLE/StartAllList"  method = "get">
+<input type = "submit" value= "つぎへ" onclick="ring()"><br>
+</form>
+
+</div>
+
+</body>
+</html>
